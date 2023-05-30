@@ -1,16 +1,17 @@
 import React from "react";
+import Navigation from "../components/navigation";
 import Container from "../components/Container";
 import Head from "next/head";
 
-const Index = () => {
+const Nosotros = () => {
   return (
     <Container>
       <Head>
-        <title>Home - Miso Woods</title>
+        <title>Nosotros - Miso Woods</title>
       </Head>
-      <h1>Hola Azeroth!</h1>
+      <p>Nosotros</p>
     </Container>
   );
 };
 
-export default Index;
+export default Nosotros;
