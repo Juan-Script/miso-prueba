@@ -2,7 +2,11 @@ import React from "react";
 import { Flex, Box, Text, Spacer } from "@chakra-ui/react";
 import Link from "next/link";
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  activeRoute: string;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ activeRoute }) => {
   return (
     <Flex bg="gray.800" color="white" align="center" p={4}>
       <Box ml={4}>
