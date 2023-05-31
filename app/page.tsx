@@ -3,15 +3,7 @@
 import React from "react";
 import Head from "next/head";
 import { NextPage, NextPageContext } from "next";
-import fetch from "isomorphic-fetch";
-import {
-  Box,
-  Heading,
-  Text,
-  Image,
-  Button,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Image, Button } from "@chakra-ui/react";
 import Container from "./components/Container";
 
 interface Review {
@@ -24,7 +16,7 @@ interface IndexProps {
   reviews: Review[] | undefined; // Asegurarse de que 'reviews' pueda ser undefined
 }
 
-const Index: NextPage<IndexProps> = ({ reviews }) => {
+const Index: NextPage<IndexProps> = () => {
   return (
     <Container>
       <Head>
@@ -70,17 +62,6 @@ const Index: NextPage<IndexProps> = ({ reviews }) => {
       </Box>
     </Container>
   );
-};
-
-Index.getInitialProps = async (ctx: NextPageContext) => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
-  const reviews = data.slice(0, 6).map((item: any) => ({
-    id: item.id,
-    name: item.title,
-    positiveReview: item.body,
-  }));
-  return { reviews };
 };
 
 export default Index;
