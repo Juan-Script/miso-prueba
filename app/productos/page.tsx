@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Box, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import Container from "../components/Container";

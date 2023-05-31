@@ -1,5 +1,6 @@
+"use client";
+
 import React from "react";
-import Container from "../components/Container";
 import Head from "next/head";
 import { NextPage, NextPageContext } from "next";
 import fetch from "isomorphic-fetch";
@@ -11,6 +12,7 @@ import {
   Button,
   SimpleGrid,
 } from "@chakra-ui/react";
+import Container from "./components/Container";
 
 interface Review {
   id: number;
