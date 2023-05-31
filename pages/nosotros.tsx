@@ -4,14 +4,13 @@ import {
   Heading,
   Text,
   Image,
-  VStack,
   Wrap,
   WrapItem,
   Flex,
 } from "@chakra-ui/react";
 import Container from "../components/Container";
 import Head from "next/head";
-import { IoMdCheckmarkCircle } from "react-icons/io";
+// import { IoMdCheckmarkCircle } from "react-icons/io";
 
 const Nosotros: React.FC = () => {
   return (
@@ -32,19 +31,19 @@ const Nosotros: React.FC = () => {
         <Wrap mt={4}>
           <WrapItem>
             <Box display="flex" alignItems="center">
-              <IoMdCheckmarkCircle style={{ marginRight: "4px" }} />
+              {/* <IoMdCheckmarkCircle style={{ marginRight: "4px" }} /> */}
               <Text>Sostenibilidad</Text>
             </Box>
           </WrapItem>
           <WrapItem>
             <Box display="flex" alignItems="center">
-              <IoMdCheckmarkCircle style={{ marginRight: "4px" }} />
+              {/* <IoMdCheckmarkCircle style={{ marginRight: "4px" }} /> */}
               <Text>Calidad</Text>
             </Box>
           </WrapItem>
           <WrapItem>
             <Box display="flex" alignItems="center">
-              <IoMdCheckmarkCircle style={{ marginRight: "4px" }} />
+              {/* <IoMdCheckmarkCircle style={{ marginRight: "4px" }} /> */}
               <Text>Diseño innovador</Text>
             </Box>
           </WrapItem>
