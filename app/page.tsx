@@ -6,17 +6,7 @@ import { NextPage, NextPageContext } from "next";
 import { Box, Heading, Text, Image, Button } from "@chakra-ui/react";
 import Container from "./components/Container";
 
-interface Review {
-  id: number;
-  name: string;
-  positiveReview: string;
-}
-
-interface IndexProps {
-  reviews: Review[] | undefined; // Asegurarse de que 'reviews' pueda ser undefined
-}
-
-const Index: NextPage<IndexProps> = () => {
+const Index: NextPage = () => {
   return (
     <Container>
       <Head>
