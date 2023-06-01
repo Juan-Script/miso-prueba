@@ -1,17 +1,33 @@
 "use client";
+
 import React from "react";
-import { Box, Avatar, Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button, Avatar } from "@chakra-ui/react";
 import Container from "../components/Container";
 import Head from "next/head";
 
-const Perfil: React.FC = () => {
+interface PerfilProps {
+  avatarSrc: string;
+}
+
+export const getServerSideProps = async () => {
+  const avatarSrc = "https://i.pravatar.cc/300";
+
+  return {
+    props: {
+      avatarSrc,
+    },
+  };
+};
+
+const Perfil: React.FC<PerfilProps> = ({ avatarSrc }) => {
   return (
     <Container>
       <Head>
         <title>Perfil - Miso Woods</title>
       </Head>
       <Flex align="center" justify="center" direction="column" mt={8}>
-        <Avatar size="2xl" name="John Doe" src="https://i.pravatar.cc/300" />
+        <Avatar size="2xl" src={"https://i.pravatar.cc/300"} />
+
         <Heading mt={4}>John Doe</Heading>
         <Text mt={2} color="gray.500">
           UI/UX Designer

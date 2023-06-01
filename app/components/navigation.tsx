@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Spacer } from "@chakra-ui/react";
+import { Flex, Box, Text, Spacer, Button } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface NavigationProps {
@@ -16,17 +16,20 @@ const Navigation: React.FC<NavigationProps> = ({ activeRoute }) => {
       </Box>
       <Spacer />
       <Box mr={4} display="flex" alignItems="center">
-        <Link href="/" passHref>
+        <Link href="/" passHref prefetch={false}>
           <Text mr={4}>Inicio</Text>
         </Link>
-        <Link href="/nosotros" passHref>
+        <Link href="/nosotros" passHref prefetch={false}>
           <Text mr={4}>Nosotros</Text>
         </Link>
-        <Link href="/productos" passHref>
+        <Link href="/productos" passHref prefetch={false}>
           <Text mr={4}>Productos</Text>
         </Link>
-        <Link href="/perfil" passHref>
+        <Link href="/perfil" passHref prefetch={false}>
           <Text mr={4}>Perfil</Text>
+        </Link>
+        <Link href="/subirproducto" passHref>
+          <Button mr={4}>Subir producto</Button>
         </Link>
       </Box>
     </Flex>

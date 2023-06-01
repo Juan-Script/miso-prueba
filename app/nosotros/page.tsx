@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Container from "../components/Container";
 import Head from "next/head";
+
 // import { IoMdCheckmarkCircle } from "react-icons/io";
 
 const Nosotros: React.FC = () => {

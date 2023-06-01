@@ -2,8 +2,9 @@
 import React from "react";
 import { Box, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import Container from "../components/Container";
-import Head from "next/head";
+
 import Card from "../components/Card";
+import Head from "next/head";
 
 interface Producto {
   key: number;

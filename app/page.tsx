@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Head from "next/head";
 import { NextPage, NextPageContext } from "next";
 import { Box, Heading, Text, Image, Button } from "@chakra-ui/react";
 import Container from "./components/Container";
+import Head from "next/head";
 
 const Index: NextPage = () => {
   return (
